@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="MVP Activity"
+    minApi="9"
+    minBuildApi="14"
+    description="Creates a new MVP Class">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="moduleName"
+        name="Module Name"
+        type="string"
+        constraints="unique|nonempty" />
+    
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <parameter
+        id="describe"
+        name="describe"
+        type="string" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
